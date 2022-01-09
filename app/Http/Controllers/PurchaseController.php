@@ -42,7 +42,7 @@ class PurchaseController extends Controller
             'quantity' => 'required|min:1',
             'expiry_date' => 'required',
             'supplier' => 'required',
-            'image' => 'file|image|mimes:jpg,jpeg,png,gif',
+            'image' => 'file|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
         $imageName = null;
         if ($request->hasFile('image')) {
@@ -96,7 +96,7 @@ class PurchaseController extends Controller
             'quantity' => 'required',
             'expiry_date' => 'required',
             'supplier' => 'required',
-            'image' => 'file|image|mimes:jpg,jpeg,png,gif',
+            'image' => 'file|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
         $imageName = null;
         if ($request->hasFile('image')) {
